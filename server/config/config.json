@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "postgres",
-    "password": "postgres",
-    "database": "livecode-phase2-siang",
+    "password": "123",
+    "database": "p2_final_lc",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "operatorsAliases": false
