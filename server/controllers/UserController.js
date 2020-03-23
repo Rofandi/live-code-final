@@ -6,11 +6,12 @@ class UserController{
     static login(req, res, next){
         const username = req.body.username;
         const password = req.body.password;
+        console.log(username, password);
         User.findOne({ where: {username}})
         .then(data=>{
             if(data){
                 if(password === data.password){
-                    let token = jwt.sign({username: data.username});
+                    let token = jwt.sign({id: data.id, username: data.username});
                     res.status(200).json({token});
                 }else{
                     next({

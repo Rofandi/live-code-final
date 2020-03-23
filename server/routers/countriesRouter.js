@@ -1,8 +1,8 @@
 "use strict"
 
 const router = require('express').Router();
-const CountryController = require('./controllers/CountryController.js');
+const CountryController = require('../controllers/CountryController.js');
 
-router.get('/countries', CountryController.getCountries);
+router.get('/', CountryController.getCountries);
 
 module.exports = router;
