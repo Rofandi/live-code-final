@@ -19,7 +19,13 @@ class ReportController{
         const recovered = req.body.recovered;
         Report.create({
             UserId: userId,
-            CountryId: countryId
+            CountryId: countryId,
+            cases: cases,
+            deaths: deaths,
+            recovered: recovered
+        }).then(report =>{
+            Country.findByPk(countryId)
+            .then(country =>{})
         })
     }
 
